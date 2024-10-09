@@ -1,0 +1,111 @@
+.part1{
+  background-color: #F5F5F5;
+}
+
+.part1 h1, .part2 h1,.part3 h1,.part4 h1{
+  font-weight: 400;
+  font-size: 31px;
+  color: rgba(0, 0, 0, 0.874);
+}
+
+.part1 p, .part2 p, i{
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+i{
+  color: #017698;
+  
+}
+
+.myClass li{
+  color: #017698;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+ul li:hover{
+  text-decoration: underline;
+}
+
+h2{
+  color: #017698;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+img{
+  width: 100%;
+}
+
+.col-3{
+width: 400px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+
+.container .col-3:hover{
+  border: 3px solid #017698 !important;
+}
+
+.class li:hover{
+  text-decoration: none;
+}
+
+.image-item {
+  width: 100px;
+  /* height: 150px; */
+ 
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fs-5{
+  color: #ab4fbd;
+}
+
+.part6 li:hover{
+  text-decoration: none;
+}
+
+
+.part6  li{
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+.part6 p{
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+.p{
+  color: #017698  !important;
+}
+
+.bottom p{
+  color: #017698 !important;
+}
+
+@media (max-width: 576px) {
+  .myimg{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 550;
+    padding: 2px;
+  }
+span i{
+  font-size: 23px;
+  padding: 2px;
+  margin: 0 10px;
+}
+}

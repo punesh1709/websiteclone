@@ -1,0 +1,254 @@
+<h2 class="text-center fw-bolder my-4">Recent Articles & Videos</h2>
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let card of cards">
+      <div class="card d-flex flex-row">
+        <div>
+          <img
+            [src]="card.image"
+            class="card-img-top p-2 rounded-4"
+            alt="{{ card.title }}"
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center mb-4">
+  <button class="btn1" routerLink="/articles-videos">
+    More Articles & Videos
+  </button>
+</div>
+
+<div class="divn text-white">
+  <div class="container p-4">
+    <div class="row">
+      <!-- First column with text -->
+      <div class="col">
+        <div class="mt-4">
+          <h2 class="fw-bold p-2">Learn with NN/g</h2>
+          <p class="fw-bold p-2">
+            Increase your UX knowledge alongside other UX professionals or your
+            <br />
+            own team. All live courses are created and taught by NN/g experts.
+          </p>
+          <button class="btn2">Live Online Course</button>
+        </div>
+      </div>
+
+      <!-- Second column with image -->
+      <div class="col">
+        <img
+          src="https://media.nngroup.com/static/img/banners/home-live-mobile.webp"
+          alt=""
+          class="image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="d-flex justify-content-around align-items-center divs flex-column flex-md-row mt-4"
+>
+  <div class="d-flex align-items-center flex-column flex-md-row">
+    <div>
+      <img
+        src="https://media.nngroup.com/static/img/certification-badge.svg"
+        alt=""
+        class="logo"
+      />
+    </div>
+    <div>
+      <p class="p">Take 5 Courses, Pass 5 Exams, Become UX Certified</p>
+    </div>
+  </div>
+  <div>
+    <button class="btn1 p-2">UX Certification Benifits</button>
+  </div>
+</div>
+
+<div class="container mt-4 p-4">
+  <h2>Popular Live Virtual Courses</h2>
+  <div class="row mt-4">
+    <!-- Card 1 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card card1">
+        <div class="yellow"></div>
+        <div class="p-2">
+          <div class="div">
+            <img
+              src="https://media.nngroup.com/media/courses/icons/Practical_AI_for_UX_Professionals.svg"
+              alt="Practical AI for UX Professionals"
+            />
+          </div>
+          <h6>Practical AI for UX Professionals</h6>
+          <p>Leverage artificial intelligence tools to enhance</p>
+          <div class="d-flex">
+            <div class="triangle"></div>
+            <p class="m-2">INTERACTION</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card card2">
+        <div class="green"></div>
+        <div class="p-2">
+          <div class="div">
+            <img
+              src="https://media.nngroup.com/media/courses/icons/Design_Systems_and_Pattern_Libraries.svg"
+              alt="Design Systems and Pattern Libraries"
+            />
+          </div>
+          <h6>Design Systems and Pattern Libraries</h6>
+          <p>Increase design quality, consistency, and efficiency</p>
+          <div class="d-flex">
+            <div class="rectangle"></div>
+            <p class="m-2">MANAGEMENT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card card3">
+        <div class="blue"></div>
+        <div class="p-2">
+          <div class="div">
+            <img
+              src="https://media.nngroup.com/media/courses/icons/Measuring_UX_and_ROI.svg"
+              alt="Measuring UX and ROI"
+            />
+          </div>
+          <h6>Measuring UX and ROI</h6>
+          <p>Use metrics from quantitative research to demonstrate value</p>
+          <div class="d-flex">
+            <div class="circle"></div>
+            <p class="m-2">RESEARCH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card card4">
+        <div class="greens"></div>
+        <div class="p-2">
+          <div class="div">
+            <img
+              src="https://media.nngroup.com/media/courses/icons/ResearchOps.svg"
+              alt="ResearchOps: Scaling User Research"
+            />
+          </div>
+          <h6>ResearchOps: Scaling User Research</h6>
+          <p>Orchestrate and optimize research to amplify its impact</p>
+          <div class="d-flex">
+            <div class="rectangle"></div>
+            <p class="m-2">MANAGEMENT</p>
+            <div class="circle"></div>
+            <p class="m-2">RESEARCH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-4">
+  <div class="row">
+    <div class="part1 col">
+      <!-- <img src="	https://media.nngroup.com/static/img/banners/home-team-training.webp" alt=""> -->
+    </div>
+
+    <div class="part2 col p-4 d-flex">
+      <div class="cont">
+        <h2 class="fw-bold">Private Team Training</h2>
+        <p class="fw-bold fs-5 mt-4">
+          Your team can build your UX skills together, either online <br />
+          or in-person. We’ll focus the discussion around your <br />
+          team’s goals.
+        </p>
+        <button class="btn btn1 btn-danger">
+          Get Pricing for Team Training
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4 ">
+  <div class="row"> 
+     <h1 class="fw-bold mb-4">Why NN/g</h1>
+  <div class="d-flex col">
+    <div class="card-image">
+      <img src="https://media.nngroup.com/static/img/icons/icon-team.svg" alt="">
+    </div>
+    <div>
+      <p class="fw-bold fs-5">We’re a team of experts.</p>
+      <p>We’ve spent more than 25 years working in <br> research and design — serving a wide <br> variety of industries and clients, from small <br> startups to Fortune 500 companies.</p>
+    </div>
+  </div>
+
+  <div class="d-flex col">
+    <div class="card-image">
+      <img src="https://media.nngroup.com/static/img/icons/icon-guidance.svg" alt="">
+    </div>
+
+    <div>
+      <p class="fw-bold fs-5">We’re trusted for our <br> research-backed guidance.</p>
+      <p>We publish actionable research findings to <br> establish industry best practices for UX <br> professionals to use in their work.</p>
+    </div>
+  </div>
+
+  <div class="d-flex col">
+    <div class="card-image">
+    <img src="https://media.nngroup.com/static/img/icons/icon-practical.svg" alt="">
+  </div>
+    <div>
+      <p class="fw-bold fs-5">We give practical advice.</p>
+      <p>Our customers choose to come back to us <br> time after time because we give them <br> recommendations that work. No gimmicks, <br> trends, or buzzwords here.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="container p-4">
+  <div class="row">
+    <div class="part1 part1s col">
+      <!-- <img src="	https://media.nngroup.com/static/img/banners/home-team-training.webp" alt=""> -->
+    </div>
+
+    <div class="part2 part2s col p-4 d-flex">
+      <div class="cont">
+        <h2 class="fw-bold">Consulting Services</h2>
+        <p class="fw-bold fs-5 mt-4">
+          Hire NN/g to help your team. We’ll conduct research, <br> advise on strategy, evaluate your product, or run a custom <br> workshop.
+          <br>
+          <br>
+          Not sure which consulting service you’re looking for? We’ll <br> help you figure it out.
+
+        </p>
+        <button class="btn btn1 btn-danger bg-white text-black">
+          Explore Consulting Options
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

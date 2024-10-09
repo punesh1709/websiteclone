@@ -1,0 +1,85 @@
+.part1{
+  background-color: rgba(0, 0, 0, 0.099);
+}
+
+.part1 p{
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+#span{
+  font-size: 36px;
+  line-height: 47px;
+  font-weight: 400;
+}
+
+h1{
+  font-size: 36px;
+  line-height: 47px;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 26px;
+  font-weight: 550;
+  line-height: 34px;
+}
+
+
+h6{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+p{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.part2 span{
+  color: rgb(140, 89, 188);
+}
+
+.part2 span:hover{
+ text-decoration: underline;
+}
+
+.mydiv{
+  width: 300px;
+}
+
+.mydiv:hover{
+  border: 3px solid grey;
+}
+
+span{
+  font-style: italic;
+  color: #01769F;
+  cursor: pointer;
+}
+
+span:hover{
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .myCard{
+   display: none;
+  }
+  img{
+    height: 140px;
+  }
+}
+
+
+.card:hover{
+  border: 3px solid grey;
+}
+
+img{
+  border-radius: 5px;
+
+ }

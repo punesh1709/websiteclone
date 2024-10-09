@@ -1,0 +1,127 @@
+<div class="part1">
+  <div class="p-4 container">
+    <h1><span id="span">About</span> NN/g</h1>
+    <p>
+      We're a globally trusted team of UX experts, dedicated to providing
+      reliable <br class="d-none d-sm-block" />
+      guidance and practical skill-building for design and research
+      professionals.
+    </p>
+  </div>
+</div>
+
+<div class="part2 my-5">
+  <div class="container">
+    <h3>Who We Are</h3>
+    <div class="my-4">
+      <h6>Expertise-Driven</h6>
+      <p>
+        We’re a team of industry leaders who have shaped the field of experience
+        design for more than 25 years. <span>Our Team</span>
+      </p>
+    </div>
+
+    <div class="my-4">
+      <h6>Research-Based</h6>
+      <p>
+        Our UX insights are grounded in evidence, not hype. Our guidance helps
+        organizations improve their designs, streamline their work, and achieve
+        their goals.
+        <br />
+        <span>Consulting Services</span>
+      </p>
+    </div>
+
+    <div class="my-4">
+      <h6>Practitioner-Focused</h6>
+      <p>
+        We empower UX professionals to level-up their work and careers. Our
+        library of <span> free articles and videos</span> includes research
+        findings, guidelines, and UX methods. Tens of thousands of professionals
+        have grown critical skills through our training and
+        <span>UX Certification. </span>
+        Upcoming Courses
+        <br />
+        <span>UX Certification. </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="part3">
+  <div class="container">
+    <h3 (click)="toggleLeadership()">
+      <span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>
+      Our Senior Leadership Team
+    </h3>
+    
+    <!-- Mobile collapse (d-block on mobile screens) -->
+    <div 
+      class="d-flex flex-column flex-md-row justify-content-between part2"
+      [ngClass]="{'d-none': !isLeadershipOpen, 'd-md-flex': true}"
+    >
+      <div
+        class="card myCard"
+        style="width: 18rem"
+        *ngFor="let leader of leadership"
+      >
+        <img [src]="leader.img" alt="{{ leader.name }}" />
+        <div class="card-body">
+          <h6>{{ leader.name }}</h6>
+          <p>{{ leader.position }}</p>
+        </div>
+      </div>
+    
+      <!-- Mobile version with different layout -->
+      <div
+        class="card my-2 d-block d-md-none"
+        style="width: 100%"
+        *ngFor="let leader of leadership"
+      >
+        <div class="row no-gutters">
+          <div class="col-5">
+            <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid" />
+          </div>
+          <div class="col-7">
+            <div class="card-body px-0">
+              <h6 class="card-title">{{ leader.name }}</h6>
+              <p class="card-text">{{ leader.position }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="part4 mt-5 p-5">
+  <div class="container">
+    <h3 class="my-4">Trusted Leaders in User Experience</h3>
+    <div>
+      <p>
+        NN/g has an extensive legacy of thought leadership in design. The
+        company was established in 1998 by two UX pioneers, Dr. <span>discount usability movement</span>
+        and Dr. <span>Don Norman.</span> Among their many contributions, Jakob developed the
+        Ten <span>Usability Heuristics</span> and led the <span>discount usability movement</span>, while
+        Don invented the term “user experience” and authored The Design of
+        Everyday Things.
+      </p>
+      <p>
+        In the early 2000s, Don and Jakob were joined by <span>Kara Pernice, Hoa
+          Loranger,</span> and <span>Raluca Budiu.</span> Their work significantly impacted modern
+        understanding of user behavior, particularly influencing content and
+        mobile design.
+      </p>
+      <p>
+        After leading the company for 25 years, Jakob retired from NN/g in April
+        2023. Don, who retired from NN/g in 2018, remains on the Board of
+        Directors. Kara Pernice guides the company as President and CEO,
+        supported by vice presidents <span>Sarah Gibbons, Kate Moran,</span> and Hoa
+        Loranger.
+      </p>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,493 @@
+<h1 class="container mt-5">Articles & Videos</h1>
+<div class="container mt-5">
+  <div class="row">
+    <div class="div1 col-3 d-none d-sm-block">
+      <div class="list-group">
+        <h5 class="mb-3">Topics</h5>
+
+        <!-- Display the initial topics -->
+        <div
+          *ngFor="let topic of topics"
+          class="list-group-item custom-topic-item"
+        >
+          {{ topic }}
+        </div>
+
+        <!-- Display additional topics only if showMore is true -->
+        <div *ngIf="showMore">
+          <div
+            *ngFor="let topic of additionalTopics"
+            class="list-group-item custom-topic-item"
+          >
+            {{ topic }}
+          </div>
+        </div>
+
+        <!-- "See all topics" or "See less topics" button based on the state of showMore -->
+        <div
+          class="list-group-item custom-topic-item text-primary font-weight-bold MyDivs"
+          (click)="toggleTopics()"
+          style="cursor: pointer"
+        >
+          {{ showMore ? "▼ See less topics" : "▼ See all topics" }}
+        </div>
+      </div>
+      <div class="list-group">
+        <h5 class="mb-3">Popular Articles</h5>
+
+        <!-- Display the initial topics -->
+        <div
+          *ngFor="let topic of myTopics"
+          class="list-group-item custom-topic-item"
+        >
+          {{ topic }}
+        </div>
+
+        <!-- Display additional topics only if showMore is true -->
+      
+      </div>
+
+      <div class="list-group">
+        <h5 class="mb-3">All Authors</h5>
+
+        <!-- Display the initial topics -->
+        <div
+          *ngFor="let topic of Author"
+          class="list-group-item custom-topic-item"
+        >
+          {{ topic }}
+        </div>
+
+        <!-- Display additional topics only if showMore is true -->
+        <div *ngIf="showMore">
+          <div
+            *ngFor="let topic of addAuthor"
+            class="list-group-item custom-topic-item"
+          >
+            {{ topic }}
+          </div>
+        </div>
+
+        <!-- "See all topics" or "See less topics" button based on the state of showMore -->
+        <div
+          class="list-group-item custom-topic-item text-primary font-weight-bold MyDivs"
+          (click)="toggleTopics()"
+          style="cursor: pointer"
+        >
+          {{ showMore ? "▼ See less topics" : "▼ See all topics" }}
+        </div>
+      </div>
+    </div>
+    <div class="div2 col-12 col-md-9">
+      <div class="container mt-5">
+        <!-- Nav tabs -->
+        <ul class="nav" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="recent-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#mostRecent"
+              type="button"
+              role="tab"
+              aria-controls="mostRecent"
+              aria-selected="true"
+            >
+              Most Recent
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="popular-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#mostPopular"
+              type="button"
+              role="tab"
+              aria-controls="mostPopular"
+              aria-selected="false"
+            >
+              Most Popular
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="videos-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#videosOnly"
+              type="button"
+              role="tab"
+              aria-controls="videosOnly"
+              aria-selected="false"
+            >
+              Videos Only
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link d-none d-sm-block"
+              id="articles-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#articlesOnly"
+              type="button"
+              role="tab"
+              aria-controls="articlesOnly"
+              aria-selected="false"
+            >
+              Articles Only
+            </button>
+          </li>
+        </ul>
+        <hr>
+
+        <!-- Tab content -->
+        <div class="tab-content mt-3">
+          <div
+            class="tab-pane fade show active MyClass"
+            id="mostRecent"
+            role="tabpanel"
+            aria-labelledby="recent-tab"
+          >
+            <div>7 Tips for Successful Discoveries</div>
+            <p>
+              September 27, 2024 | Article: 4 minutes to read <br />
+              Discovery is challenging; it can be hard to know what to research,
+              how to do discovery as a team, and how to get buy-in. Follow these
+              7 tips for smoother discovery efforts.
+            </p>
+
+            <div>Accelerating Research with AI</div>
+            <p>
+              September 27, 2024 | Article: 10 minutes to read AI can speed up
+              certain research tasks but is currently most helpful in the
+              planning and analysis stages.
+            </p>
+
+            <div>Roadmaps vs. Project Timelines</div>
+            <span class="d-flex">
+              <p>
+                September 25, 2024 | 4 minute video <br />
+                Learn how roadmaps can guide product team strategy and project
+                timelines guide execution.
+              </p>
+              <img
+                src="https://media.nngroup.com/media/videos/thumbnails/Roadmaps_vs_project_management_plans_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+                alt=""
+              />
+            </span>
+
+            <div class="mt-5 mytext">
+              Error Messages: 4 Guidelines for Effective Communication
+            </div>
+            <span class="d-flex">
+              <p>
+                September 23, 2024 | 3 minute video <br />
+                Communicate effectively with your error messages by using
+                human-readable language,<br />
+                concisely and precisely describing the issue, offering
+                constructive advice, and not blaming the user.
+              </p>
+
+              <img
+                src="https://media.nngroup.com/media/videos/thumbnails/Error_Messages_4_Guidelines_for_Effective_Communication_Thumbnail_1.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+                alt=""
+              />
+            </span>
+
+            <div>7 Tips for Successful Discoveries</div>
+            <p>
+              September 27, 2024 | Article: 4 minutes to read <br />
+              Discovery is challenging; it can be hard to know what to research,
+              how to do discovery as a team, and how to get buy-in. Follow these
+              7 tips for smoother discovery efforts.
+            </p>
+
+            <div>Accelerating Research with AI</div>
+            <p>
+              September 27, 2024 | Article: 10 minutes to read AI can speed up
+              certain research tasks but is currently most helpful in the
+              planning and analysis stages.
+            </p>
+
+            <div>Roadmaps vs. Project Timelines</div>
+            <span class="d-flex">
+              <p>
+                September 25, 2024 | 4 minute video <br />
+                Learn how roadmaps can guide product team strategy and project
+                timelines guide execution.
+              </p>
+              <img
+                src="https://media.nngroup.com/media/videos/thumbnails/UX_Resumes_-_10_Tips_for_Seasoned_Professionals_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+                alt=""
+              />
+            </span>
+
+            <div class="mt-5 mytext">
+              Error Messages: 4 Guidelines for Effective Communication
+            </div>
+            <span class="d-flex">
+              <p>
+                September 23, 2024 | 3 minute video <br />
+                Communicate effectively with your error messages by using
+                human-readable language,<br />
+                concisely and precisely describing the issue, offering
+                constructive advice, and not blaming the user.
+              </p>
+
+              <img
+                src="https://media.nngroup.com/media/videos/thumbnails/Don_San_Diego_2023_Video_10_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+                alt=""
+              />
+            </span>
+
+            <div>How Do Generative AI Systems Work?</div>
+
+            <p>
+              September 13, 2024 | Article: 9 minutes to read <br />
+              Generative AI systems are prediction machines. This article breaks
+              down neural networks and LLMs in nontechnical language.
+            </p>
+            <div>NN/g’s Free UX Templates and Guides</div>
+            <p>
+              September 13, 2024 | Article: 5 minutes to read <br />
+              Use this curated set of free NN/g templates and guides for
+              inspiration and to accelerate your product development activities
+              and UX career.
+            </p>
+          </div>
+
+          <div
+            class="tab-pane fade MyClass "
+            id="mostPopular"
+            role="tabpanel"
+            aria-labelledby="popular-tab"
+          >
+          <div>10 Usability Heuristics for User Interface Design</div>
+          <p>April 24, 1994 | Article: 7 minutes to read <br>
+            Jakob Nielsen's 10 general principles for interaction design. They are called "heuristics" because they are broad rules of thumb for UX and not specific usability guidelines.</p>
+           <div>Empathy Mapping: The First Step in Design Thinking</div>
+           <p>January 14, 2018 | Article: 6 minutes to read <br>
+            Visualizing user attitudes and behaviors in an empathy map helps UX teams align on a deep understanding of end users. The mapping process also reveals any holes in existing user data.</p>
+
+            <div>When to Use Which User-Experience Research Methods</div>
+            <p>October 12, 2014 | Article: 8 minutes to read <br>
+              Modern day UX research methods answer a wide range of questions. To know when to use which method, each of 20 methods is mapped across 3 dimensions and over time within a typical product-development process.
+              </p>
+              <div>Service Blueprints: Definition</div>
+              <p>August 27, 2017 | Article: 5 minutes to read <br>
+                Service blueprints visualize organizational processes in order to optimize how a business delivers a user experience.
+                </p>
+                <div>Journey Mapping 101</div>
+                <p>December 9, 2018 | Article: 7 minutes to read <br>
+                  A journey map is a visualization of the process that a person goes through in order to accomplish a goal.</p>
+                  <div>The Four Dimensions of Tone of Voice</div>
+                  <p>July 17, 2016 | Article: 7 minutes to read <br>
+                    A website’s tone of voice communicates how an organization feels about its message. The tone of any piece of content can be analyzed along 4 dimensions: humor, formality, respectfulness, and enthusiasm.
+                    </p>
+                    <div>Between-Subjects vs. Within-Subjects Study Design</div>
+                    <p>May 13, 2018 | Article: 7 minutes to read <br>
+                      In user research, between-groups designs reduce learning effects; repeated-measures designs require fewer participants and minimize the random noise.</p>
+
+                      <div>UX Research Cheat Sheet</div>
+                      <p>February 12, 2017 | Article: 9 minutes to read <br>
+                        User research can be done at any point in the design cycle. This list of methods and activities can help you decide which to use when.</p>
+          </div>
+          
+
+
+
+
+          <div
+            class="tab-pane fade MyClass"
+            id="videosOnly"
+            role="tabpanel"
+            aria-labelledby="videos-tab"
+          >
+          <div>Roadmaps vs. Project Timelines</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Roadmaps_vs_project_management_plans_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-5 mytext">
+            Error Messages: 4 Guidelines for Effective Communication
+          </div>
+          <span class="d-flex">
+            <p>
+              September 23, 2024 | 3 minute video <br />
+              Communicate effectively with your error messages by using
+              human-readable language,<br />
+              concisely and precisely describing the issue, offering
+              constructive advice, and not blaming the user.
+            </p>
+
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Error_Messages_4_Guidelines_for_Effective_Communication_Thumbnail_1.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-4">UX Resumes: 10 Tips for Seasoned Professionals</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/UX_Resumes_-_10_Tips_for_Seasoned_Professionals_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-4">How to Break into Design: Don’s Advice</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Don_San_Diego_2023_Video_10_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-4">Practical vs. Statistical Significance</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Caleb_Practical_vs_Statistical_Thumbnail.png.650x364_q75_autocrop_crop-smart_upscale.png"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-4">The 6 Rules of Design Thinking</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Stakeholder_Personas_vs_Stakeholder_Profiles_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-4">Skeleton Screens vs. Progress Bars vs. Spinners</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/The_6_Rules_of_Design_Thinking_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="mt-4">Livestream Ecommerce: 7 Tips for Good UX</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Skeleton_Screen.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+          <div class="mt-4">Practical vs. Statistical Significance</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Intranet_Success_Metrics_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+          <div class="mt-4">Livestream Ecommerce: 7 Tips for Good UX</div>
+          <span class="d-flex">
+            <p>
+              September 25, 2024 | 4 minute video <br />
+              Learn how roadmaps can guide product team strategy and project
+              timelines guide execution.
+            </p>
+            <img
+              src="https://media.nngroup.com/media/videos/thumbnails/Livestream_Ecomm_Tips_Thumbnail.jpg.650x364_q75_autocrop_crop-smart_upscale.jpg"
+              alt=""
+            />
+          </span>
+          </div>
+          <div
+            class="tab-pane fade MyClass"
+            id="articlesOnly"
+            role="tabpanel" 
+            aria-labelledby="articles-tab"
+          >
+          <div>10 Usability Heuristics for User Interface Design</div>
+          <p>April 24, 1994 | Article: 7 minutes to read <br>
+            Jakob Nielsen's 10 general principles for interaction design. They are called "heuristics" because they are broad rules of thumb for UX and not specific usability guidelines.</p>
+           <div>Empathy Mapping: The First Step in Design Thinking</div>
+           <p>January 14, 2018 | Article: 6 minutes to read <br>
+            Visualizing user attitudes and behaviors in an empathy map helps UX teams align on a deep understanding of end users. The mapping process also reveals any holes in existing user data.</p>
+
+            <div>When to Use Which User-Experience Research Methods</div>
+            <p>October 12, 2014 | Article: 8 minutes to read <br>
+              Modern day UX research methods answer a wide range of questions. To know when to use which method, each of 20 methods is mapped across 3 dimensions and over time within a typical product-development process.
+              </p>
+              <div>Service Blueprints: Definition</div>
+              <p>August 27, 2017 | Article: 5 minutes to read <br>
+                Service blueprints visualize organizational processes in order to optimize how a business delivers a user experience.
+                </p>
+                <div>Journey Mapping 101</div>
+                <p>December 9, 2018 | Article: 7 minutes to read <br>
+                  A journey map is a visualization of the process that a person goes through in order to accomplish a goal.</p>
+                  <div>The Four Dimensions of Tone of Voice</div>
+                  <p>July 17, 2016 | Article: 7 minutes to read <br>
+                    A website’s tone of voice communicates how an organization feels about its message. The tone of any piece of content can be analyzed along 4 dimensions: humor, formality, respectfulness, and enthusiasm.
+                    </p>
+                    <div>Between-Subjects vs. Within-Subjects Study Design</div>
+                    <p>May 13, 2018 | Article: 7 minutes to read <br>
+                      In user research, between-groups designs reduce learning effects; repeated-measures designs require fewer participants and minimize the random noise.</p>
+
+                      <div>UX Research Cheat Sheet</div>
+                      <p>February 12, 2017 | Article: 9 minutes to read <br>
+                        User research can be done at any point in the design cycle. This list of methods and activities can help you decide which to use when.</p>
+          </div>
+          <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link">Previous</a></li>
+                <li class="page-item"><a class="page-link">1</a></li>
+                <li class="page-item"><a class="page-link">2</a></li>
+                <li class="page-item"><a class="page-link">3</a></li>
+                <li class="page-item"><a class="page-link">4</a></li>
+                <li class="page-item"><a class="page-link">5</a></li>
+                <li class="page-item"><a class="page-link">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

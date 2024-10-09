@@ -1,0 +1,207 @@
+<div class="part1">
+  <div class="container p-4">
+    <h1>Consulting Services</h1>
+    <p class="p-2">
+      NN/g experts can evaluate your design through research or review, train
+      your team,<br />
+      and lead workshops to develop product and service strategies.
+    </p>
+  </div>
+</div>
+
+<div class="part2">
+  <div class="container">
+    <h1>Our Approach</h1>
+    <div class="row">
+      <div class="col-8">
+        <p>
+          We have over 25 years of experience helping leading brands in
+          virtually every industry elevate 
+          their user experiences through:
+        </p>
+        <ul class="myClass d-none d-md-block">
+          <li>Research and Assessment</li>
+          <li>Training and Workshops</li>
+          <li>Customized Consulting Services</li>
+        </ul>
+      </div>
+
+      <div class="col-4 d-none d-md-block">
+        <i>Contact us to learn more about our services:</i>
+        <p class="mt-4">
+          consultingnngroup.com <br />
+          +1 (415) 636-5011
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 class="d-md-none" (click)="toggleLeadership()"><span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>Research & Assessment</h1>
+<div class="part3"  [ngClass]="{'d-none': !isLeadershipOpen, 'd-md-flex': true}">
+  <div class="container main p-4">
+    <h1 class="d-none d-sm-block">Research & Assessment</h1>
+    <div class="row d-flex justify-content-between">
+      <div class="border col-3 p-4">
+        <h2>Uesr Testing</h2>
+        <p>
+          We test your design with real users, analyze their <br />
+          feedback, and provide recommended <br />
+          improvements.
+        </p>
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/DSC07501-510x340.jpg.500x340_q75_autocrop_crop-smart_upscale.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="border col-3 p-4">
+        <h2>Expert Review</h2>
+        <p>
+          NN/g experts analyze the strengths and opportunities to improve your
+          website or application.
+        </p>
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/270045379-68a176a4-191b-464c-9f99-3c01bc84d65f.png.500x340_q75_autocrop_crop-smart_upscale.png"
+          alt=""
+        />
+      </div>
+      <div class="border col-3 p-4">
+        <h2>UX Maturity Assessment</h2>
+        <p>
+          NN/g experts will assess your research and design practices to provide
+          a baseline maturity-stage and tailored recommendations to level-up.
+        </p>
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/ExpertReview-59.png.500x340_q75_autocrop_crop-smart_upscale.png"
+          alt=""
+        />
+      </div>
+      <br />
+      <div class="border col-3 mt-4">
+        <h2>Customized User Research</h2>
+        <p>
+          We use proven methods to gather insights about both high-level and
+          detailed UX questions:
+        </p>
+        <ul class="class">
+          <li>Discover your users' motivation and needs</li>
+          <li>Measure the effectiveness of specific UI elements</li>
+          <li>Identify the source of large conversion issues</li>
+          <li>Benchmark your product's usability</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h1 class="d-md-none" (click)="toggleTraining()"><span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>Training & Workshops</h1>
+<div class="part3" [ngClass]="{'d-none': ! isTrainning, 'd-md-flex': true}">
+  <div class="container p-4">
+    <h1 class="d-none d-sm-block">Training & Workshops</h1>
+    <div class="row d-flex justify-content-between">
+      <div class="border col-3 p-4">
+        <h2>Team Training</h2>
+        <p>
+          Bring NN/g UX training to your team, with 35+ course options and
+          optional UX Certification.
+        </p>
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/IMG_2806_copy_1350x900.jpg.500x340_q75_autocrop_crop-smart_upscale.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="border col-3 p-4">
+        <h2>Intensive Applied Workshops</h2>
+        <p>
+          NN/g experts lead your team learning UX methods and applying them to
+          your current design challenges.
+        </p>
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/IMG_1090_copy_2000x1500.jpg.500x340_q75_autocrop_crop-smart_upscale.jpg"
+          alt=""
+        />
+      </div>
+      <div class="border col-3 p-4">
+        <h2>Keynote Speaking</h2>
+        <p>Our world-class, expert speakers will inspire your audience.</p>
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/20181101_London-025_2000x1500.jpg.500x340_q75_autocrop_crop-smart_upscale.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 class="d-md-none"  (click)=" toggleConsulting()"><span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>Customized Consulting Services</h1>
+<div class="part2 container" [ngClass]="{'d-none': !isConsult, 'd-md-flex': true}">
+  <h1 class="d-none">Customized Consulting Services</h1>
+  <p>
+    We can also create unique, custom service offerings depending on your team's
+    needs. Our deep expertise in
+    <b> UX strategy, user research, service design,</b> and
+    <b> UX design </b> can be applied flexibly in both limited and extended
+    engagements. Pricing for these engagements depend on the scope of the
+    engagement, but typically projects range from $40K–200K USD. Contact us to
+    learn more.
+  </p>
+</div>
+
+<h1 class="d-md-none" (click)="toggleClients()"><span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>Our Consulting Clients</h1>
+<div class="part4 container"  [ngClass]="{'d-none': ! isClients, 'd-md-flex': true}">
+  <div class="">
+    <h1 class="d-none d-sm-block">Our Consulting Clients</h1>
+    <div class="image-gallery p-4">
+      <div class="row">
+        <div *ngFor="let image of imageArray" class="col-2 my-auto">
+          <img [src]="image" alt="Image" class="image-item myimg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="fs-5">See All Clients by Industry</p>
+</div>
+
+<h1 (click)="toggleNG()" class="d-md-none"><span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>Why NN/g?</h1>
+
+<div class="part6 container" [ngClass]="{'d-none': !isNG, 'd-md-flex': true, 'flex-column': true}">
+  <h4 class="">Why NN/g?</h4>
+  <p>
+    We practice what we preach. We don’t just talk about the importance of
+    testing with real users, on real tasks, in real life business situations: we
+    do it. Every week, somewhere around the globe, NN/g team members are
+    conducting research that informs the three pillars of our business:
+    training, consulting and research. In that work we have:
+  </p>
+  <ul>
+    <li>Tested over 2,000 different interfaces</li>
+    <li>Observed more than 4,000 users—in person—in 18 countries and 5 continents</li>
+    <li>Analyzed thousands of hours of recorded user observations sessions Conducted </li>
+    <li>countless diary studies, focus groups and remote user tests </li>
+  </ul>
+
+  <p>Our collective experience will save you time… and money. Making technology easier to use is no longer a nice-to-have. Useful, usable products make money. And our expertise can help your team achieve their design goals quicker and easier than going it alone. Choosing NN/g means you benefit directly from our:</p>
+
+  <ul>
+    <li><b>Finely tuned methodology: </b>We have an arsenal of proven tools at our disposal and know how and where to apply each one, taking the guesswork out of how to achieve the optimal design solution to meet your business goals.</li>
+    <li><b>Comprehensive body of knowledge:</b> We've taken the results of our decades of research and testing and distilled it down into actionable guidelines, best practices and proven methodologies. Our research library, containing over 50 published reports, 30 books and an email newsletter archive dating back to 1995 is unrivaled.</li>
+    <li><b>Practical approach: </b>Our approach is 100% practical, useful and actionable. Whether you attend one of our UX Conferences or invite us to consult at your place of business, the training you will receive can be put into action immediately so that you can see the results.</li>
+  </ul>
+
+  <p>Our people are the best in the business. At NN/g there is no “B Team.” When we dispatch consultants to work with you and your team, or when you attend a virtual training, you are learning directly from some of the best-educated and most experienced minds in the business.
+  </p>
+  <h3>We can help your organization deliver world-class user experiences.
+  </h3>
+  <p ><i class="text-black">We can help your organization deliver world-class user experiences.
+  </i></p>
+
+  <div class="bottom">   
+    <p>consultingnngroup.com
+      <br>
+      <br>
+      +1 (415) 636-5011</p>
+    </div>
+</div>

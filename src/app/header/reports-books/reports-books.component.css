@@ -1,0 +1,53 @@
+.part1 h1{
+  font-weight: 400;
+  font-size: 31px;
+  color: rgba(0, 0, 0, 0.874);
+}
+
+.part1 p{
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+.part1{
+  background-color: #fffbfb;
+}
+
+h2{
+font-size: 18px;
+color: #017698;
+}
+
+.myDiv p{
+  font-size: 18px;
+}
+
+.myDivs p{
+  font-size: 18px; 
+  color: #017698;
+ 
+}
+
+.myDivs p:hover, .myDiv h2:hover{
+  text-decoration: underline;
+}
+
+
+.my-books p{
+  font-size: 18px; 
+  color: #000000;
+}
+
+.card{
+  width: 270px;
+  height: 450px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card{
+    width: 180px;
+    height: 350px;
+   
+  }
+}

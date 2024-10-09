@@ -1,0 +1,24 @@
+span{
+  color: red;
+}
+
+.p{
+  color: rgb(140, 89, 188) !important;
+  cursor: pointer;
+}
+
+.p:hover{
+  text-decoration: underline;
+}
+
+button{
+  width: 110px;
+}
+
+*{
+  font-family: "Source Sans Variable", Arial, sans-serif;
+}
+
+.span{
+  color: rgb(84, 146, 227);
+}

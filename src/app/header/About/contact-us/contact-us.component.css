@@ -1,0 +1,67 @@
+h2 {
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 47px;
+}
+
+* {
+  font-family: "Source Sans Variable", Arial, sans-serif;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 47px;
+}
+
+.contact {
+  font-size: 14px;
+  color: rgb(1, 118, 152);
+  cursor: pointer;
+  
+}
+.contact:hover, .p:hover{
+  text-decoration: underline;
+}
+
+div {
+  font-weight: 700;
+  line-height: 26px;
+}
+
+div span {
+  font-weight: 700;
+  line-height: 26px;
+  color: rgb(1, 118, 152);
+  cursor: pointer;
+}
+
+span:hover{
+text-decoration: underline;
+}
+.p{
+  font-size: 14px;
+  line-height: 23px;
+  color: rgb(1, 118, 152);
+  font-weight: 200;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.div p{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 100;
+
+}
+
+.div{
+  margin-top: 35px;
+}
+
+.no-hover-effect {
+  text-decoration: none !important;
+ cursor: default !important;
+}

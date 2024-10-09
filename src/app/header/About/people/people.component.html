@@ -1,0 +1,123 @@
+<div class="myContainer">
+  <div class="container">
+    <div class="part1 row">
+      <div class="col-12 col-md-7">
+        <h2>People</h2>
+        <p>
+          Our experts focus on gathering, distilling, and sharing insights that
+          shape the field of user experience, with guidance from our leadership
+          team and support from our design and research assistants.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="my-4">Senior Leadership</h3>
+    <div class="d-flex flex-column flex-md-row justify-content-between part2">
+      <div
+        class="card myCard"
+        style="width: 18rem"
+        *ngFor="let leader of leadership"
+      >
+        <img [src]="leader.img" alt="{{ leader.name }}" />
+        <div class="card-body">
+          <h6>{{ leader.name }}</h6>
+          <p>{{ leader.position }}</p>
+        </div>
+      </div>
+
+      <div
+        class="card my-2 d-block d-md-none"
+        style="width: 100"
+        *ngFor="let leader of leadership"
+      >
+        <div class="row no-gutters">
+          <div class="col-5">
+            <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid" />
+          </div>
+          <div class="col-7">
+            <div class="card-body px-0">
+              <h6 class="card-title">{{ leader.name }}</h6>
+              <p class="card-text">{{ leader.position }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <h3>Experts</h3>
+      <div class="row">
+        <div *ngFor="let leader of expert" class="col-3">
+          <div class="card myCard my-4" style="width: 18rem">
+            <img [src]="leader.img" alt="{{ leader.name }}" />
+            <div class="card-body">
+              <h6>{{ leader.name }}</h6>
+              <p>{{ leader.position }}</p>
+            </div>
+          </div>
+        </div>
+        
+    
+        <div
+            class="card my-2 d-block d-md-none"
+            style="width: 100"
+            *ngFor="let leader of expert"
+          >
+            <div class="row no-gutters">
+              <div class="col-5">
+                <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid myimg" />
+              </div>
+              <div class="col-7">
+                <div class="card-body px-0">
+                  <h6 class="card-title">{{ leader.name }}</h6>
+                  <p class="card-text">{{ leader.position }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h3>Research and Design Assistants</h3>
+      <div class="row">
+        <div *ngFor="let leader of reserch" class="col-3">
+          <div class="card myCard my-4" style="width: 18rem">
+            <img [src]="leader.img" alt="{{ leader.name }}" />
+            <div class="card-body">
+              <h6>{{ leader.name }}</h6>
+              <p>{{ leader.position }}</p>
+            </div>
+          </div>
+        </div>
+        
+    
+        <div
+            class="card my-2 d-block d-md-none"
+            style="width: 100"
+            *ngFor="let leader of reserch"
+          >
+            <div class="row no-gutters">
+              <div class="col-5">
+                <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid myimg" />
+              </div>
+              <div class="col-7">
+                <div class="card-body px-0">
+                  <h6 class="card-title">{{ leader.name }}</h6>
+                  <p class="card-text">{{ leader.position }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

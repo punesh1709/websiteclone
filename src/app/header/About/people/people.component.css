@@ -1,0 +1,71 @@
+h2{
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.part1 p{
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+
+
+span{
+  font-style: italic;
+  color: #01769F;
+  cursor: pointer;
+}
+
+span:hover{
+  text-decoration: underline;
+}
+
+h3{
+  font-size: 22px;
+  line-height: normal;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.part2{
+  border-radius: 10px;
+}
+
+img{
+  border-start-start-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.myContainer{
+
+  background-color: #F5F5F5;
+}
+
+@media (max-width: 576px) {
+ .myCard{
+  display: none;
+ }
+
+ .img-fluid{
+  height: 140px;
+ }
+
+ img{
+  border-radius: 5px;
+ }
+
+}
+
+.MyCard{
+  display: none;
+}
+
+.myimg{
+  margin-left: -12px;
+}
+
+.card:hover{
+  border: 3px solid grey;
+}

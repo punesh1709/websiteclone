@@ -1,0 +1,168 @@
+.btn1 {
+  background-color: #cb2128;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+}
+
+.btn2 {
+  background-color: rgb(0, 42, 246);
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+}
+
+img {
+  height: 140px;
+  width: 140px;
+}
+
+.card:hover {
+  border: 2px solid rgba(0, 0, 0, 0.405);
+  cursor: pointer;
+}
+
+.divn {
+  background-color: #171960;
+}
+
+.image {
+  height: 300px;
+  width: 400px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.divs {
+  background-color: rgba(214, 54, 54, 0.058);
+  /* height: 87px; */
+}
+
+.p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #fbff00;
+  margin-top: 14px;
+}
+
+.rectangle {
+  height: 14px;
+  width: 14px;
+  background-color: lightgreen;
+  margin-top: 13px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  margin-top: 13px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.card p {
+  font-size: 15px;
+}
+
+.yellow {
+  height: 14px;
+  background-color: #fbff00;
+  border-radius: 5px 5px 0 0;
+}
+
+.card1:hover {
+  border: 2px solid #fbff00;
+}
+
+.card2:hover {
+  border: 2px solid lawngreen;
+}
+
+.card4:hover {
+  border: 2px solid lawngreen;
+}
+
+.card3:hover {
+  border: 2px solid blueviolet;
+}
+
+.green {
+  height: 14px;
+  background-color: lawngreen;
+  border-radius: 5px 5px 0 0;
+}
+
+.blue {
+  height: 14px;
+  background-color: blueviolet;
+  border-radius: 5px 5px 0 0;
+}
+
+.greens {
+  height: 14px;
+  background-color: lawngreen;
+  border-radius: 5px 5px 0 0;
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .div {
+    display: none;
+  }
+  .part1{
+    display: none;
+  }
+
+  .part2{
+    border-radius: 20px !important;
+  }
+}
+
+.part1 {
+  background-image: url("https://media.nngroup.com/static/img/banners/home-team-training.webp");
+  background-size: cover;
+  height: 400px;
+  border-radius: 20px 0 0 20px;
+}
+
+.part2{
+  background-color: #EDA4FA;
+  border-radius: 0 20px   20px 0;
+}
+
+.cont{
+  margin: auto;
+}
+
+.card-image img{
+  height: 50px;
+}
+
+.part1s{
+  background-image: url("https://media.nngroup.com/static/img/banners/home-consulting.webp");
+}
+
+.part2s{
+  background-color: #FFD914;
+}
+

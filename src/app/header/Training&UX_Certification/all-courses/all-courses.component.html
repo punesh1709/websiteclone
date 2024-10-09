@@ -1,0 +1,98 @@
+<div class="Mydiv">
+  <div class="container">
+    <div class="row">
+      <div class="part1 col my-4 mx-2">
+        <h1 class="px-4">Browse Courses</h1>
+        <p class="p-4">
+          We offer full-day and multi-day courses that can be taken virtually.
+          All courses are eligible for <span> UX Certification.</span>
+        </p>
+      </div>
+
+      <div class="part2 col d-none d-sm-block">
+        <img
+          src="https://media.nngroup.com/media/pagebits/data/images/image_137.png.1200x550_q75_autocrop_crop-smart_upscale-KM.jpg.600x275_q75_autocrop_crop-smart_upscale.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 p-4">
+  <div class="row align-items-center">
+    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+      <select class="form-select">
+        <option selected>All UX Certification Specialties</option>
+        <option value="1">Interaction</option>
+        <option value="1">Management</option>
+        <option value="1">Research</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+      <select class="form-select">
+        <option selected>All Topics</option>
+        <option value="1">Colabration & Team</option>
+        <option value="1">Research Methods</option>
+        <option value="1">Strategy</option>
+        <option value="1">UX Leadership & Management</option>
+        <option value="1">Web/UI Design</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+      <select class="form-select">
+        <option selected>All Schedules</option>
+        <option value="1">All Schedule</option>
+        <option value="1">Half Day</option>
+        <option value="1">Full Day</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="col-lg-3 col-md-12 col-sm-12 text-start text-sm-end">
+      <a href="#" class="btn btn-outline-primary">
+        <fa-icon [icon]="faCalendar"></fa-icon>
+        Course Calendar
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="card-container">
+  <div class="card" *ngFor="let card of titles; let i = index">
+    <div class="card-header" [ngStyle]="{ 'border-top-color': labels[i].color }">
+      <img [src]="images[i]" alt="{{ card }}" class="card-icon" />
+     
+    </div>
+    <div class="card-body">
+      <h3>{{ card }}</h3> 
+      <p>{{ descriptions[i] }}</p>
+    </div>
+    <div class="card-footer">
+      <span class="label" [ngStyle]="{ 'color': labels[i].color }">{{ labels[i].text }}</span>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row g-3"> <!-- Use Bootstrap's g-2 for gaps between columns -->
+    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let card of titles; let i = index">
+      <div class="card">
+        <div class="blue" [ngStyle]="{ 'border-top-color': labels[i].color }"></div>
+        <div class="p-2">
+          <div class="">
+            <img [src]="images[i]" alt="{{ card }}" class="card-icon" />
+          </div>
+
+          <h3>{{ card }}</h3>
+          <p class="p">{{ descriptions[i] }}</p> <!-- Dynamic description -->
+          <div class="d-flex align-items-center">
+            <div class="circle" [ngStyle]="{ 'background-color': labels[i].color }"></div>
+            <p class="m-2">{{ labels[i].text }}</p> <!-- Dynamic label -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
