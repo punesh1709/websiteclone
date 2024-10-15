@@ -1,121 +1,224 @@
-  <div class="banner" *ngIf="showBanner">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary text-over-svg">
-      <div class="container-fluid">
-        <a class="navbar-brand px-4" routerLink="/home">
-          <img
-            src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
-            alt=""
-            class="logo"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+<div class="banner background-image" *ngIf="showBackground"></div>
+
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary text-over-svg bg-transparent navbar-custom"
+>
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand px-4 d-block d-md-none my-home-banner" routerLink="/home">
+      <img
+        src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
+        alt=""
+        class="logo"
+      />
+    </a> -->
+    <a class="navbar-brand px-4 myimgs-1" routerLink="/home">
+      <img
+        src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
+        alt=""
+        class="logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler position-relative span"
+      type="button"
+      [attr.aria-expanded]="isOpen"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-label="Toggle navigation"
+      (click)="toggleNavbaar()"
+    >
+      <span class="">
+        <fa-icon
+          [icon]="isOpen ? faXmark : faBars"
+          class="text-black fs-4 border-0 myicon"
+        ></fa-icon>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li
+          class="nav-item navv dropdown"
+          [ngClass]="{ 'active-item': activeItem === 'training' }"
+          (click)="setActiveItem('training')"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
+          >
+            Training & UX Certification
+          </a>
+          <ul class="dropdown-menu border-0 px-4 py-2">
+            <li>
+              <a class="dropdown-item" routerLink="/all-courses">All Courses</a>
+            </li>
+            <li>
               <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Training & UX Certification
-              </a>
-              <ul class="dropdown-menu px-4 py-2">
-                <li>
-                  <a class="dropdown-item" routerLink="/all-courses"
-                    >All Courses</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" routerLink="/live-virtual-training"
-                    >Live Virtual Training</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" routerLink="/private-team-training"
-                    >Private Team Training</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" routerLink="/ux-certification"
-                    >UX Certification</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/articles-videos"
-                >Articles & Videos</a
+                class="dropdown-item"
+                routerLink="/live-virtual-training"
+                [ngClass]="{
+                  'text-red': isHomeRoute,
+                  'text-black': !isHomeRoute
+                }"
+                >Live Virtual Training</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/consulting">Consulting</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/reports-books">Reports & Books</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <li>
+              <a class="dropdown-item" routerLink="/private-team-training"
+                >Private Team Training</a
               >
-                About NN/g
-              </a>
-              <ul class="dropdown-menu px-4 py-2">
-                <li>
-                  <a class="dropdown-item" routerLink="/overview">Overview</a>
-                </li>
-                <li><a class="dropdown-item" routerLink="/people">People</a></li>
-                <li>
-                  <a class="dropdown-item" routerLink="/clients">Clients</a>
-                </li>
-                <li><a class="dropdown-item" routerLink="/news">News</a></li>
-                <li>
-                  <a class="dropdown-item" routerLink="/contact-us">Contact Us</a>
-                </li>
-              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/ux-certification"
+                >UX Certification</a
+              >
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <div class="d-flex p-2 mt-1">
-              <a class="nav-link" routerLink="/login">Log in</a>
-            </div>
-            <div class="d-flex border rounded-pill p-2">
-              <input
-                class="form-control me-2 border border-0 rounded-pill"
-                type="search"
-                aria-label="Search"
-              />
-            </div>
-          </form>
+        </li>
+        <li
+          class="nav-item"
+          [ngClass]="{ 'active-item': activeItem === 'articles' }"
+          (click)="setActiveItem('articles')"
+        >
+          <a
+            class="nav-link"
+            routerLink="/articles-videos"
+            [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
+          >
+            Articles & Videos
+          </a>
+        </li>
+        <li
+          class="nav-item"
+          [ngClass]="{ 'active-item': activeItem === 'consulting' }"
+          (click)="setActiveItem('consulting')"
+        >
+          <a
+            class="nav-link"
+            routerLink="/consulting"
+            [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
+          >
+            Consulting
+          </a>
+        </li>
+        <li
+          class="nav-item"
+          [ngClass]="{ 'active-item': activeItem === 'reports' }"
+          (click)="setActiveItem('reports')"
+        >
+          <a
+            class="nav-link"
+            routerLink="/reports-books"
+            [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
+          >
+            Reports & Books
+          </a>
+        </li>
+        <li
+          class="nav-item dropdown"
+          [ngClass]="{ 'active-item': activeItem === 'about' }"
+          (click)="setActiveItem('about')"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
+          >
+            About NN/g
+          </a>
+          <ul class="dropdown-menu px-4 py-2 border-0">
+            <li>
+              <a class="dropdown-item" routerLink="/overview">Overview</a>
+            </li>
+            <li><a class="dropdown-item" routerLink="/people">People</a></li>
+            <li><a class="dropdown-item" routerLink="/clients">Clients</a></li>
+            <li><a class="dropdown-item" routerLink="/news">News</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/contact-us">Contact Us</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex myform" role="search">
+        <div class="d-flex p-2 mt-1 d-none d-lg-block">
+          <a
+            class="nav-link mylogin"
+            routerLink="/login"
+            [ngClass]="{
+              'text-red': isHomeRoute,
+              'text-black': !isHomeRoute,
+              'active-item': activeItem === 'login'
+            }"
+            (click)="setActiveItem('login')"
+          >
+            Log in
+          </a>
         </div>
-      </div>
-    </nav>
 
-    <div class="MyDiv px-5">
-      <h1 class="">
-        Research-based, practitioner-focused.<br />
-        Your source for UX guidance and training.
-      </h1>
-
-      <div class="d-flex gap-4 mt-4">
-        <button class="btn1">Upcomming Courses</button>
-        <button class="btn2">All Courses</button>
-      </div>
+        <div
+          class="d-flex flex-column align-items-center position-relative mt-2 d-none d-lg-block d-none d-lg-block"
+        >
+          <div class="position-relative">
+            <input
+              class="me-2 rounded-pill p-2 border"
+              type="search"
+              aria-label="Search"
+            />
+            <fa-icon
+              [icon]="faMagnifyingGlass"
+              class="position-absolute search-icon"
+              [ngClass]="{
+                'text-red': isHomeRoute,
+                'text-black': !isHomeRoute
+              }"
+            ></fa-icon>
+          </div>
+        </div>
+      </form>
+      <div class="Login d-flex justify-content-center p-4 d-block d-md-none">
+        <button
+          class="nav-link mylogin my-login rounded-pill"
+          routerLink="/login"
+          [ngClass]="{
+            'text-red': isHomeRoute,
+            'text-black': !isHomeRoute,
+            'active-item': activeItem === 'login'
+          }"
+          (click)="setActiveItem('login')"
+        >
+          Login
+        </button>
+    </div>
+    
+    <a class="navbar-brand px-4 my-home-banner d-block d-md-none" routerLink="/home">
+        <img
+          src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
+          alt=""
+          class="logo"
+        />
+    </a>
+    
     </div>
   </div>
-  
+</nav>
+
+<div class="MyDiv px-5" *ngIf="showHeading">
+  <h1 class="">
+    Research-based, practitioner-focused.<br />
+    Your source for UX guidance and training.
+  </h1>
+
+  <div class="d-flex gap-4 mt-4" *ngIf="showBackground">
+    <button class="btn1">Upcomming Courses</button>
+    <button class="btn2">All Courses</button>
+  </div>
+</div>

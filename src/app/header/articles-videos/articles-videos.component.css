@@ -12,7 +12,7 @@
 /* Add a bottom border on hover */
 .custom-topic-item:hover {
   text-decoration: underline;
-  text-decoration-thickness: 1.5px; 
+  text-decoration-thickness: 1.5px;
 }
 
 /* Styling the "See all topics" and "See less topics" */
@@ -20,61 +20,63 @@
   font-weight: bold; /* Make the text bold */
 }
 
-.nav-item button{
-color: #017698;
-font-weight: 700;
-font-size: 14px;
-border: none;
-margin-bottom: 15px;
-}
-
-.MyClass div{
+.nav-item button {
   color: #017698;
-font-weight: 600;
-font-size: large;
-margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  margin-bottom: 15px;
 }
 
-.MyClass div{
+.MyClass div {
   color: #017698;
-font-weight: 600;
-font-size: large;
-margin-bottom: 10px;
+  font-weight: 600;
+  font-size: large;
+  margin-bottom: 10px;
 }
 
-.MyClass div:hover{
+.MyClass div {
+  color: #017698;
+  font-weight: 600;
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+.MyClass div:hover {
   text-decoration: underline;
-  text-decoration-thickness: 1.5px; 
+  text-decoration-thickness: 1.5px;
 }
 
-
-.MyClass p{
+.nav-link.active {
+  border-bottom: 3px solid #017698 !important;
+}
+.MyClass p {
   margin-bottom: 25px;
 }
 
-span img{
+span img {
   width: 290px;
   margin-top: -35px;
   margin-right: 30px !important;
 }
 
-.mytext{
-  color: #925eb2!important;
+.mytext {
+  color: #925eb2 !important;
 }
 
 /* Remove borders from pagination links */
 .pagination .page-link {
   border: none; /* Remove the default border */
   padding: 8px 12px; /* Adjust padding for spacing */
-  color: black;  /* Set the default color to Bootstrap primary */
+  color: black; /* Set the default color to Bootstrap primary */
   text-decoration: none; /* Remove underline */
   transition: color 0.3s ease; /* Smooth transition on hover */
 }
 
 /* Change color on hover */
 .pagination .page-link:hover {
- text-decoration: underline; /* Darker shade on hover */
- cursor: pointer;
+  text-decoration: underline; /* Darker shade on hover */
+  cursor: pointer;
 }
 
 /* Remove focus outline */
@@ -82,24 +84,18 @@ span img{
   box-shadow: none; /* Remove the default focus outline */
 }
 
-.MyDivs{
+.MyDivs {
   text-decoration: none;
   color: #925eb2 !important ;
   font-weight: 700 !important;
 }
 
-
-.nav-link.active{
-  border-bottom: 4px solid #017698 !important; /* Change the color as needed */ 
+hr {
+  margin-top: -15px;
 }
-
-hr{
- margin-top: -15px;
-}
-
 
 @media (max-width: 576px) {
-  img{
+  img {
     height: 120px;
     margin-top: 20px !important;
   }

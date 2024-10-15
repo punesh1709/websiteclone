@@ -4,7 +4,7 @@
 }
 
 * {
-  font-family: Arial,  sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 550;
   color: aliceblue;
   font-size: 15px;
@@ -15,7 +15,6 @@
 
 .navbar {
   background-color: transparent !important;
-  padding: 5px 25px;
 }
 
 body {
@@ -27,7 +26,7 @@ body {
 }
 
 .banner {
-  background-image: url("https://media.nngroup.com/static/img/banners/home-header-desktop.svg");
+  /* background-image: url("https://media.nngroup.com/static/img/banners/home-header-desktop.svg"); */
   background-size: cover;
   background-color: rgb(92, 15, 15); /* Set background color to red */
 
@@ -45,41 +44,201 @@ body {
   border: none;
 }
 
-li a:hover {
+li:hover {
   color: whitesmoke;
-  text-decoration: underline 3px solid #CB2128;
+  border-bottom: 5px solid #d15256;
 }
 
-
-
-.btn1{
-  background-color: #CB2128;
-  border: none; 
-  border-radius: 25px; 
+.btn1 {
+  background-color: #cb2128;
+  border: none;
+  border-radius: 25px;
   padding: 15px;
 }
 
-
-
-.btn2{
+.btn2 {
   background-color: transparent;
-  border: 1px solid white; 
-  border-radius: 25px; 
+  border: 1px solid white;
+  border-radius: 25px;
   padding: 15px;
 }
 
-h1{
+h1 {
   font-size: 30px;
   font-weight: 700;
 }
 
-.MyDiv{
- margin: 60px 100px;
+.MyDiv {
+  margin: 60px 100px;
 }
 
 @media only screen and (max-width: 600px) {
-  .MyDiv{
+  .MyDiv {
     margin: 30px 15px;
-   }
+  }
 }
 
+.background-image {
+  background-image: url("https://media.nngroup.com/static/img/banners/home-header-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  height: 46vh; /* Full height */
+  width: 100%;
+  position: absolute;
+  z-index: -1; /* Place behind other content */
+}
+
+.text-red {
+  color: white !important;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.position-relative {
+  max-width: 300px; /* Adjust as needed */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+
+  pointer-events: none; /* Make sure the icon doesn’t interfere with input interaction */
+}
+
+.search-icon {
+  font-size: 23px;
+}
+
+ul li a,
+input {
+  font-size: 14px;
+  margin: 5px;
+  font-weight: 500;
+}
+
+.mylogin {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input:focus {
+  outline: 2px solid rgb(0, 0, 0);
+  padding: 4px !important;
+}
+
+input {
+  background-color: transparent;
+}
+
+.myform {
+  margin-right: 9vw;
+}
+
+.nav-link {
+  padding: 12px;
+}
+
+.active-item {
+  border-bottom: 5px solid #cb2128;
+}
+
+.mylogin:hover {
+  border-bottom: 4px solid #d15256;
+}
+
+@media only screen and (max-width: 600px) {
+  .active-item {
+    border: none;
+  }
+
+  .mylogin:hover {
+    border: none;
+  }
+
+  li:hover {
+    color: whitesmoke;
+    border-bottom: none;
+  }
+
+ 
+}
+
+/* Ensure this CSS only applies to small screens */
+@media (max-width: 992px) {
+  /* When the hamburger menu is open */
+  .navbar-collapse.show {
+    background-color: white;
+    height: 100vh;
+    /* margin-top: -30px; */
+    overflow-y: auto;
+    
+    z-index: 1050; /* Higher value ensures it stays on top */
+    position: fixed; /* Keep the navbar in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width on open */
+}
+
+.span{
+  z-index: 1051;
+  position: fixed;
+  top: 10px;
+ right: 90%;
+}
+
+/* Set text color to black for links inside the navbar */
+.navbar-collapse.show .nav-link,
+.navbar-collapse.show .dropdown-item {
+    color: black !important;
+}
+
+body.nav-open {
+    overflow: hidden;
+}
+
+/* Adjust the toggler icon color to ensure visibility */
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Adjust margin for nav items inside the navbar */
+ul .navv {
+    margin-top: 50px;
+}
+.my-home-banner{
+  position: fixed;
+  top: 0;
+  left: 140px;
+}
+
+  }
+
+.Login{
+  position: fixed;
+  border-top: 1px solid rgba(0, 0, 0, 0.364);
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+}
+
+.my-login{
+ border: 1px solid red;
+ color: red !important;
+  width: 96%;
+  padding: 15px !important;
+  
+}
+
+.my-home-banner{
+  position: fixed;
+  top: 0;
+  left: 150px;
+}
+
+.myimgs-1{
+  margin: auto;
+}

@@ -1,0 +1,91 @@
+.nav-link.active {
+  border-bottom: 4px solid #e93962 !important; /* Change the color as needed */
+}
+
+.nav-tabs {
+  border-bottom: 1px solid black;
+}
+
+.nav-link:hover {
+  border-bottom: 4px solid #e9698779 !important;
+}
+
+.yellow {
+  height: 14px;
+  width: 299px;
+  margin-left: -12px;
+  background-color: #ffd914;
+  border-radius: 5px 5px 0 0;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #ffd914;
+  margin-top: 14px;
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  cursor: pointer;
+}
+
+.row .card img {
+  width: 100px;
+}
+
+.card1:hover {
+  border: 2px solid #ffd914;
+}
+
+.blue {
+  height: 14px;
+  width: 299px;
+  margin-left: -12px;
+  background-color: #8952ff;
+  border-radius: 5px 5px 0 0;
+}
+
+.card2:hover {
+  border: 2px solid #8952ff;
+}
+
+.hover-border:hover {
+  border: 2px solid grey;
+}
+
+.green {
+  height: 14px;
+  width: 299px;
+  margin-left: -12px;
+  background-color: #42c556;
+  border-radius: 5px 5px 0 0;
+}
+.card3:hover {
+  border: 2px solid #42c556;
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 90%;
+    margin: auto;
+  }
+  .yellow,
+  .green,
+  .blue {
+    width: 107%;
+  }
+  img{
+    display: none;
+  }
+  .hover-border{
+   padding: 20px;
+  }
+}

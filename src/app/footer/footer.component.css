@@ -1,5 +1,6 @@
-
-
+p li a{
+  font-family: "Source Sans Variable", Arial, sans-serif
+}
 
 .mainDiv {
   box-sizing: content-box;

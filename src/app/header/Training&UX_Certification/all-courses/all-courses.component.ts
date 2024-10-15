@@ -28,48 +28,39 @@ export class AllCoursesComponent {
     'https://media.nngroup.com/media/courses/icons/Generating_Big_Ideas.svg',
     'https://media.nngroup.com/media/courses/icons/Generating_Big_Ideas.svg',
     'https://media.nngroup.com/media/courses/icons/Design_Tradeoffs.svg',
-    'https://media.nngroup.com/media/courses/icons/Designing_Complex_Apps.svg',
-    'https://media.nngroup.com/media/courses/icons/DesignOps.svg',
-    'https://media.nngroup.com/media/courses/icons/Discoveries.svg',
-    'https://media.nngroup.com/media/courses/icons/Effective_Ideation_Techniques.svg'
+    
   ];
 
   titles = [
-    'Analytics and User Experience',
+    'Analytics and User Experience User Experience',
     'Analyzing Qualitative UX Data and Reporting Insights',
-    'Application Design for Web and Desktop',
+    'Application Design for Web and Desktop and this just write for ',
     'Assessing UX Designs Using Proven Principles',
     'Becoming a UX Coach',
     'Becoming a UX Executive',
     'Becoming a UX Strategist',
     'Content Strategy and Governance',
     'Customer-Journey Management',
-    'Design Systems and Pattern Libraries',
+    'Design Systems and Pattern',
     'Design Thinking Essentials',
-    'Design Tradeoffs and UX Decision-Making',
-    'Designing Complex Apps for Specialized Domains',
-    'DesignOps: Scaling UX Design and Research',
-    'Discovery: Building the Right Thing',
-    'Effective Ideation Techniques for UX Design'
+    'Design Tradeoffs and UX Decision',
+    
   ];
 
   descriptions = [
     'Study your users’ real-life behaviors and make data-informed design decisions',
     'Apply systematic analyses to uncover themes and user insights',
-    'Components, design patterns, workflows, and ways of interacting with complex data',
+    'Components, design patterns, workflows, and ways of interacting with',
     'Analyze user experiences using heuristics and assessments',
     'Study your users’ real-life behaviors and make data-informed design decisions',
     'Apply systematic analyses to uncover themes and user insights',
-    'Components, design patterns, workflows, and ways of interacting with complex data',
+    'Components, design patterns, workflows, and ways of interacting with',
     'Analyze user experiences using heuristics and assessments',
     'Study your users’ real-life behaviors and make data-informed design decisions',
     'Apply systematic analyses to uncover themes and user insights',
-    'Components, design patterns, workflows, and ways of interacting with complex data',
+    'Components, design patterns, workflows, and ways of interacting with',
     'Analyze user experiences using heuristics and assessments',
-    'Study your users’ real-life behaviors and make data-informed design decisions',
-    'Apply systematic analyses to uncover themes and user insights',
-    'Components, design patterns, workflows, and ways of interacting with complex data',
-    'Analyze user experiences using heuristics and assessments'
+ 
   ];
 
   labels = [
@@ -77,6 +68,14 @@ export class AllCoursesComponent {
     { text: 'RESEARCH', color: 'purple' },
     { text: 'INTERACTION', color: 'yellow' },
     { text: 'RESEARCH', color: 'purple' },
-   
+    { text: 'MANAGEMENT', color: 'green' },
+    { text: 'MANAGEMENT', color: 'green' },
+    { text: 'MANAGEMENT', color: 'green' },
+    { text: 'MANAGEMENT', color: 'green' },
+    { text: 'MANAGEMENT', color: 'green' },
+    { text: 'MANAGEMENT', color: 'green' },
+    { text: 'INTERACTION', color: 'yellow' },
+    { text: 'MANAGEMENT', color: 'green' },
   ];
+  
 }

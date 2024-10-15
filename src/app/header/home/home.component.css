@@ -1,3 +1,7 @@
+
+*{
+  font-family: "Source Sans Variable", Arial, sans-serif
+}
 .btn1 {
   background-color: #cb2128;
   border: none;
@@ -133,8 +137,17 @@ img {
     display: none;
   }
 
+  .myimg img{
+    position: static !important;
+
+  }
+
   .part2{
     border-radius: 20px !important;
+  }
+
+  .myh1{
+    margin-top: 100px !important;
   }
 }
 
@@ -166,3 +179,7 @@ img {
   background-color: #FFD914;
 }
 
+.myimg img{
+  position: relative;
+  top: 20px;
+}

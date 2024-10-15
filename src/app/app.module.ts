@@ -19,7 +19,9 @@ import { NewsComponent } from './header/About/news/news.component';
 import { ContactUsComponent } from './header/About/contact-us/contact-us.component';
 import { UxCertificationComponent } from './header/Training&UX_Certification/ux-certification/ux-certification.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { LoginComponent } from './header/login/login.component';
+import { UxCardComponent } from './header/Training&UX_Certification/ux-certification/ux-card/ux-card.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { LoginComponent } from './header/login/login.component';
     ContactUsComponent,
     UxCertificationComponent,
     LoginComponent,
-
+    UxCardComponent,
+  
  
   ],
   imports: [
