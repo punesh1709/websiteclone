@@ -26,8 +26,8 @@
         </ul>
       </div>
 
-      <div class="col-4 d-none d-md-block">
-        <i>Contact us to learn more about our services:</i>
+      <div class="col-4 d-none d-md-block myClass">
+        <i class="text-black">Contact us to learn more about our services:</i>
         <p class="mt-4">
           consultingnngroup.com <br />
           +1 (415) 636-5011
@@ -151,8 +151,8 @@
 </div>
 
 <h1 class="d-md-none" (click)="toggleClients()"><span><i class="fa-solid fa-caret-right text-black d-md-none"></i></span>Our Consulting Clients</h1>
-<div>
-<div class="part4 container"  [ngClass]="{'d-none': ! isClients, 'd-md-flex': true}">
+<div [ngClass]="{'d-none': ! isClients, 'd-md-flex': true}" class="flex-column">
+<div class="part4 container"  >
   <div class="">
     <h1 class="d-none d-sm-block">Our Consulting Clients</h1>
     <div class="image-gallery p-4">
@@ -164,7 +164,8 @@
     </div>
   </div>
   <br>
-  <p class="fs-5">See All Clients by Industry</p>
+</div>
+<p class="fs-5 container " >See All Clients by Industry</p>
 </div>
 
 

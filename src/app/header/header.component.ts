@@ -29,28 +29,37 @@ export class HeaderComponent  implements OnInit {
   }
 
 
+
+  imageLoaded = false; // Flag to prevent reloading the image
+
+  
   ngOnInit() {
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Show background only on the Home route
-        this.showBackground = event.url === '/home';
-      }
-    });
-
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        // Show <h1> only on the Home route
-        this.showHeading = event.url === '/home' || event.url === '/';
-      }
-    });
-
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        // Check if the current route is Home
-        this.isHomeRoute = event.url === '/home' || event.url === '/';
+        const isHome = event.url === '/home' || event.url === '/';
+        
+        this.showBackground = isHome;
+        this.showHeading = isHome;
+        this.isHomeRoute = isHome;
+  
+        // Load the image only once for the home route
+        if (isHome && !this.imageLoaded) {
+          this.loadImage();
+          this.imageLoaded = true; // Ensure it's only loaded once
+        }
       }
     });
   }
+  
+  // Method to load the image
+  loadImage() {
+    const img = new Image();
+    img.src = 'assets/your-image-path.jpg'; // Replace with your image path
+    img.onload = () => {
+      console.log('Image preloaded');
+    };
+  }
+  
 
   isNavbarOpen: boolean = false;
 

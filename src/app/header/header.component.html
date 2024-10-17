@@ -4,14 +4,11 @@
   class="navbar navbar-expand-lg bg-body-tertiary text-over-svg bg-transparent navbar-custom"
 >
   <div class="container-fluid">
-    <!-- <a class="navbar-brand px-4 d-block d-md-none my-home-banner" routerLink="/home">
-      <img
-        src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
-        alt=""
-        class="logo"
-      />
-    </a> -->
-    <a class="navbar-brand px-4 myimgs-1" routerLink="/home">
+    <a
+      class="navbar-brand px-4 myimgs-1 nav-link active"
+      routerLink="/home"
+      (click)="setActiveItem('home')"
+    >
       <img
         src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
         alt=""
@@ -30,11 +27,23 @@
     >
       <span class="">
         <fa-icon
+          [ngClass]="{
+            'text-red': isHomeRoute,
+            'text-black': !isHomeRoute
+          }"
           [icon]="isOpen ? faXmark : faBars"
           class="text-black fs-4 border-0 myicon"
         ></fa-icon>
       </span>
     </button>
+    <fa-icon
+      [icon]="faMagnifyingGlass"
+      class="position-absolute search-icon d-lg-none myserch"
+      [ngClass]="{
+        'text-red': isHomeRoute,
+        'text-black': !isHomeRoute
+      }"
+    ></fa-icon>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -44,7 +53,7 @@
           (click)="setActiveItem('training')"
         >
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle active"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -54,10 +63,28 @@
             Training & UX Certification
           </a>
           <ul class="dropdown-menu border-0 px-4 py-2">
-            <li>
-              <a class="dropdown-item" routerLink="/all-courses">All Courses</a>
+            <li
+              class="border-0"
+              [attr.aria-expanded]="isOpen"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-label="Toggle navigation"
+              (click)="toggleNavbaar()"
+            >
+              <a class="dropdown-item border-0" routerLink="/all-courses"
+                >All Courses</a
+              >
             </li>
-            <li>
+            <li
+              class="border-0"
+              [attr.aria-expanded]="isOpen"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-label="Toggle navigation"
+              (click)="toggleNavbaar()"
+            >
               <a
                 class="dropdown-item"
                 routerLink="/live-virtual-training"
@@ -68,12 +95,28 @@
                 >Live Virtual Training</a
               >
             </li>
-            <li>
+            <li
+              class="border-0"
+              [attr.aria-expanded]="isOpen"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-label="Toggle navigation"
+              (click)="toggleNavbaar()"
+            >
               <a class="dropdown-item" routerLink="/private-team-training"
                 >Private Team Training</a
               >
             </li>
-            <li>
+            <li
+              class="border-0"
+              [attr.aria-expanded]="isOpen"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-label="Toggle navigation"
+              (click)="toggleNavbaar()"
+            >
               <a class="dropdown-item" routerLink="/ux-certification"
                 >UX Certification</a
               >
@@ -84,9 +127,15 @@
           class="nav-item"
           [ngClass]="{ 'active-item': activeItem === 'articles' }"
           (click)="setActiveItem('articles')"
+          [attr.aria-expanded]="isOpen"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          (click)="toggleNavbaar()"
         >
           <a
-            class="nav-link"
+            class="nav-link active"
             routerLink="/articles-videos"
             [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
           >
@@ -97,9 +146,15 @@
           class="nav-item"
           [ngClass]="{ 'active-item': activeItem === 'consulting' }"
           (click)="setActiveItem('consulting')"
+          [attr.aria-expanded]="isOpen"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          (click)="toggleNavbaar()"
         >
           <a
-            class="nav-link"
+            class="nav-link active"
             routerLink="/consulting"
             [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
           >
@@ -110,9 +165,15 @@
           class="nav-item"
           [ngClass]="{ 'active-item': activeItem === 'reports' }"
           (click)="setActiveItem('reports')"
+          [attr.aria-expanded]="isOpen"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          (click)="toggleNavbaar()"
         >
           <a
-            class="nav-link"
+            class="nav-link active"
             routerLink="/reports-books"
             [ngClass]="{ 'text-red': isHomeRoute, 'text-black': !isHomeRoute }"
           >
@@ -135,13 +196,19 @@
             About NN/g
           </a>
           <ul class="dropdown-menu px-4 py-2 border-0">
-            <li>
+            <li class="border-0">
               <a class="dropdown-item" routerLink="/overview">Overview</a>
             </li>
-            <li><a class="dropdown-item" routerLink="/people">People</a></li>
-            <li><a class="dropdown-item" routerLink="/clients">Clients</a></li>
-            <li><a class="dropdown-item" routerLink="/news">News</a></li>
-            <li>
+            <li class="border-0">
+              <a class="dropdown-item" routerLink="/people">People</a>
+            </li>
+            <li class="border-0">
+              <a class="dropdown-item" routerLink="/clients">Clients</a>
+            </li>
+            <li class="border-0">
+              <a class="dropdown-item" routerLink="/news">News</a>
+            </li>
+            <li class="border-0">
               <a class="dropdown-item" routerLink="/contact-us">Contact Us</a>
             </li>
           </ul>
@@ -194,31 +261,39 @@
             'active-item': activeItem === 'login'
           }"
           (click)="setActiveItem('login')"
+          [attr.aria-expanded]="isOpen"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          (click)="toggleNavbaar()"
         >
           Login
         </button>
-    </div>
-    
-    <a class="navbar-brand px-4 my-home-banner d-block d-md-none" routerLink="/home">
+      </div>
+
+      <a
+        class="navbar-brand px-4 my-home-banner d-block d-md-none"
+        routerLink="/home"
+      >
         <img
           src="https://www.pngkey.com/png/full/343-3438143_nielsen-norman-group-logo.png"
           alt=""
           class="logo"
         />
-    </a>
-    
+      </a>
     </div>
   </div>
 </nav>
 
 <div class="MyDiv px-5" *ngIf="showHeading">
-  <h1 class="">
+  <h1 class="myh1">
     Research-based, practitioner-focused.<br />
     Your source for UX guidance and training.
   </h1>
 
-  <div class="d-flex gap-4 mt-4" *ngIf="showBackground">
+  <div class="d-flex gap-4 mt-4 mybtnss" *ngIf="showBackground">
     <button class="btn1">Upcomming Courses</button>
-    <button class="btn2">All Courses</button>
+    <button class="btn2" routerLink="/all-courses">All Courses</button>
   </div>
 </div>

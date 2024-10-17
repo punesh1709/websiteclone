@@ -53,7 +53,7 @@ h3 {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 10px solid yellow; /* Adjust color to match */
+  border-bottom: 10px solid #FFD914 /* Adjust color to match */
 }
 
 .myh3 {

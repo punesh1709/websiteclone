@@ -109,3 +109,12 @@ span i{
   margin: 0 10px;
 }
 }
+
+.myClass p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.myClass p{
+  color: #017698;
+}

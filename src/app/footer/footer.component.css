@@ -1,5 +1,5 @@
-p li a{
-  font-family: "Source Sans Variable", Arial, sans-serif
+p li a {
+  font-family: "Source Sans Variable", Arial, sans-serif;
 }
 
 .mainDiv {
@@ -57,13 +57,12 @@ ul li a {
   display: flex;
 }
 
-.btn{
-  background-color: #FF2E36;
+.btn {
+  background-color: #ff2e36;
   color: aliceblue;
   margin-top: 4px;
   margin-left: 8px !important;
   height: 43px;
-
 }
 
 ul li a:hover {
@@ -92,24 +91,26 @@ footer a:hover {
   border-bottom: 2px solid white;
 }
 
-
 @media (max-width: 576px) {
- .span{
-  width: 60px;
- }
+  .span {
+    width: 60px;
+  }
 
- .inp{
+  .inp {
+    width: 290px;
+  }
 
-  width: 290px;
- }
-
- .Subscribe{
-  width: 355px;
-  margin-left: 1px !important;
-  margin-top: 20px !important;
- }
+  .Subscribe {
+    width: 355px;
+    margin-left: 1px !important;
+    margin-top: 20px !important;
+  }
 }
 
-.myfont{
+.myfont {
   font-size: 28px;
+}
+
+a {
+  cursor: pointer;
 }

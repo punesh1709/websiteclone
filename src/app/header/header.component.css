@@ -46,7 +46,7 @@ body {
 
 li:hover {
   color: whitesmoke;
-  border-bottom: 5px solid #d15256;
+  border-bottom: 5px solid #db9597;
 }
 
 .btn1 {
@@ -96,6 +96,10 @@ h1 {
   color: black !important;
 }
 
+.myserch {
+  top: 25px !important;
+}
+
 .position-relative {
   max-width: 300px; /* Adjust as needed */
 }
@@ -126,8 +130,8 @@ input {
 }
 
 input:focus {
-  outline: 2px solid rgb(0, 0, 0);
-  padding: 4px !important;
+  outline: 2px solid transparent;
+  padding: 8px !important;
 }
 
 input {
@@ -163,8 +167,6 @@ input {
     color: whitesmoke;
     border-bottom: none;
   }
-
- 
 }
 
 /* Ensure this CSS only applies to small screens */
@@ -175,49 +177,77 @@ input {
     height: 100vh;
     /* margin-top: -30px; */
     overflow-y: auto;
-    
+
     z-index: 1050; /* Higher value ensures it stays on top */
     position: fixed; /* Keep the navbar in place when scrolling */
     top: 0;
     left: 0;
     width: 100%; /* Full width on open */
-}
-
-.span{
-  z-index: 1051;
-  position: fixed;
-  top: 10px;
- right: 90%;
-}
-
-/* Set text color to black for links inside the navbar */
-.navbar-collapse.show .nav-link,
-.navbar-collapse.show .dropdown-item {
-    color: black !important;
-}
-
-body.nav-open {
-    overflow: hidden;
-}
-
-/* Adjust the toggler icon color to ensure visibility */
-.navbar-toggler-icon {
-    filter: invert(1);
-}
-
-/* Adjust margin for nav items inside the navbar */
-ul .navv {
-    margin-top: 50px;
-}
-.my-home-banner{
-  position: fixed;
-  top: 0;
-  left: 140px;
-}
-
   }
 
-.Login{
+  .myserchicon {
+    display: none;
+  }
+
+  .span {
+    z-index: 1051;
+    position: fixed;
+    top: 10px;
+    right: 90%;
+  }
+
+  /* Set text color to black for links inside the navbar */
+  .navbar-collapse.show .nav-link,
+  .navbar-collapse.show .dropdown-item {
+    color: black !important;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  /* Adjust the toggler icon color to ensure visibility */
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  /* Adjust margin for nav items inside the navbar */
+  ul .navv {
+    margin-top: 50px;
+  }
+
+  .my-home-banner {
+    position: fixed;
+    top: 0;
+    left: 140px;
+  }
+  .mybtnss,
+  .myh1 {
+    margin-top: 50px;
+    /* width: 130% !important; */
+    margin-left: -40px;
+  }
+  .span {
+    margin-top: -10px !important;
+    text-decoration: none;
+    border: none !important;
+  }
+
+  fa-icon {
+    color: black !important;
+  }
+
+  .fa-icon.active{
+    color: black !important;
+  }
+
+  /* .search-icon{
+  color: red !important;
+  position: white;
+} */
+}
+
+.Login {
   position: fixed;
   border-top: 1px solid rgba(0, 0, 0, 0.364);
   bottom: 0;
@@ -225,20 +255,24 @@ ul .navv {
   width: 100%;
 }
 
-.my-login{
- border: 1px solid red;
- color: red !important;
+.my-login {
+  border: 1px solid red;
+  color: red !important;
   width: 96%;
   padding: 15px !important;
-  
 }
 
-.my-home-banner{
+.my-home-banner {
   position: fixed;
   top: 0;
   left: 150px;
 }
 
-.myimgs-1{
+.myimgs-1 {
   margin: auto;
+}
+
+
+fa-icon{
+  color: red !important;
 }

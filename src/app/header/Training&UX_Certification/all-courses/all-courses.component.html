@@ -27,7 +27,6 @@
         <option value="1">Interaction</option>
         <option value="1">Management</option>
         <option value="1">Research</option>
-        <!-- Add more options as needed -->
       </select>
     </div>
     <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
@@ -38,7 +37,6 @@
         <option value="1">Strategy</option>
         <option value="1">UX Leadership & Management</option>
         <option value="1">Web/UI Design</option>
-        <!-- Add more options as needed -->
       </select>
     </div>
     <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
@@ -59,34 +57,22 @@
   </div>
 </div>
 
-<!-- <div class="card-container">
-  <div class="card" *ngFor="let card of titles; let i = index">
-    <div class="card-header" [ngStyle]="{ 'border-top-color': labels[i].color }">
-      <img [src]="images[i]" alt="{{ card }}" class="card-icon" />
-     
-    </div>
-    <div class="card-body">
-      <h3>{{ card }}</h3> 
-      <p>{{ descriptions[i] }}</p>
-    </div>
-    <div class="card-footer">
-      <span class="label" [ngStyle]="{ 'color': labels[i].color }">{{ labels[i].text }}</span>
-    </div>
-  </div>
-</div> -->
-
 <div class="container py-5">
   <div class="row g-3 p-2">
-    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let card of titles; let i = index">
-      <div class="card hover-border" [ngStyle]="{ '--hover-color': labels[i].color }">
-        
-        <!-- Blue div with dynamic border-top color -->
-        <div 
-          class="blue" 
+    <div
+      class="col-lg-3 col-md-6 col-sm-12"
+      *ngFor="let card of titles; let i = index"
+    >
+      <div
+        class="card hover-border"
+        [ngStyle]="{ '--hover-color': labels[i].color }"
+      >
+        <div
+          class="blue"
           [ngStyle]="{
             'border-top': '15px solid ' + labels[i].color
-          }">
-        </div>
+          }"
+        ></div>
 
         <div class="p-2">
           <div class="text-center d-none d-sm-block">
@@ -104,10 +90,13 @@
                 'triangle-shape': labels[i].text === 'INTERACTION'
               }"
               [ngStyle]="{
-                'background-color': labels[i].text !== 'INTERACTION' ? labels[i].color : 'transparent'
+                'background-color':
+                  labels[i].text !== 'INTERACTION'
+                    ? labels[i].color
+                    : 'transparent'
               }"
             ></span>
-            <p class="m-2" [ngStyle]="{ 'color': labels[i].color }">
+            <p class="m-2" [ngStyle]="{ color: labels[i].color }">
               {{ labels[i].text }}
             </p>
           </div>
@@ -116,7 +105,3 @@
     </div>
   </div>
 </div>
-
-
-
-

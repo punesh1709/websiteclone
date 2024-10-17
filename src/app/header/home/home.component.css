@@ -147,7 +147,7 @@ img {
   }
 
   .myh1{
-    margin-top: 100px !important;
+    margin-top: 150px !important;
   }
 }
 
@@ -182,4 +182,10 @@ img {
 .myimg img{
   position: relative;
   top: 20px;
+}
+
+.card h6{
+  font-weight: 600;
+  line-height: 40px;
+  font-family: "Source Sans Variable", Arial, sans-serif;
 }
